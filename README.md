@@ -1,4 +1,4 @@
-# create-svelte
+# sveltekit-template
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
@@ -36,3 +36,30 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Prisma
+
+Prisma is the chosen ORM. Some notable prisma commands are:
+
+- To open the prisma db interface in the browser
+
+  ```sh
+  npx prisma studio
+  ```
+
+- Generate artifacts (e.g. Prisma Client)
+
+  ```sh
+  npx prisma generate
+  ```
+
+- Create a migration from changes in Prisma schema, apply it to the database, trigger generators (e.g. Prisma Client)
+
+  ```sh
+  npx prisma migrate dev --name=<migration_name>
+  ```
+
+- Validate your Prisma schema
+  ```sh
+  npx prisma validate
+  ```
