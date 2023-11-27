@@ -22,7 +22,6 @@ lint:
     - git-diff-check
     - markdownlint@0.37.0
     - osv-scanner@1.4.3
-    - oxipng@9.0.0
     - prettier@3.1.0
     - trufflehog@3.63.2-rc0
     - svelte
