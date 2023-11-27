@@ -26,9 +26,13 @@ lint:
     - prettier@3.1.0
     - trufflehog@3.63.2-rc0
     - svelte
+  files:
+    - name: svelte
+      extensions:
+        - svelte
   definitions:
     - name: svelte
-      files: [ALL]
+      files: [svelte]
       commands:
         - name: run_format
           output: pass_fail
