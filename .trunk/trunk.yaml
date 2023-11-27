@@ -25,6 +25,16 @@ lint:
     - oxipng@9.0.0
     - prettier@3.1.0
     - trufflehog@3.63.2-rc0
+    - svelte
+  definitions:
+    - name: svelte
+      files: [ALL]
+      commands:
+        - name: run_format
+          output: pass_fail
+          run: npm run format
+          formatter: true
+          success_codes: [0, 1]
 actions:
   disabled:
     - trunk-announce
