@@ -63,3 +63,7 @@ Prisma is the chosen ORM. Some notable prisma commands are:
   ```sh
   npx prisma validate
   ```
+
+## Trunk
+
+[Trunk](https://docs.trunk.io/cli) cli is being used to help with linting and overall code quality.
