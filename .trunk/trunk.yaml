@@ -17,27 +17,36 @@ runtimes:
 # This is the section where you manage your linters. (https://docs.trunk.io/check/configuration)
 lint:
   enabled:
+    - oxipng@9.0.0
+    - taplo@0.8.1
+    - trivy@0.47.0
+    - yamllint@1.33.0
     - checkov@3.1.9
     - eslint@8.54.0
     - git-diff-check
     - markdownlint@0.37.0
     - osv-scanner@1.4.3
-    - prettier@3.1.0
+    - prettier@3.1.0:
+        packages:
+          - prettier-plugin-svelte@3.1.2
     - trufflehog@3.63.2-rc0
-    - svelte
   files:
     - name: svelte
-      extensions:
-        - svelte
+      extensions: [svelte]
   definitions:
-    - name: svelte
-      files: [svelte]
-      commands:
-        - name: run_format
-          output: pass_fail
-          run: npm run format
-          formatter: true
-          success_codes: [0, 1]
+    - name: prettier
+      files:
+        - typescript
+        - yaml
+        - css
+        - sass
+        - html
+        - markdown
+        - json
+        - javascript
+        - graphql
+        - prettier_supported_configs
+        - svelte
 actions:
   disabled:
     - trunk-announce
